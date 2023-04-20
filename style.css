@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --vinho: #640d14;
+  --vinho-escuro: #42080d;
+  --cinza: #ccc;
+  --branco: #fff;
+  --preto: #000;
+  --cinza-2: #c2c0c0;
+}
+
+body {
+  background: var(--cinza);
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-primary-color {
+  background-color: #640d14;
+}
+
+.bg-secondary-color {
+  background-color: #ccc;
+}
+
+.bg-dark-color {
+  background-color: #290508;
+}
+
+.primary-color {
+  color: #fff;
+}
+
+.bg-secondary-color {
+  color: #000;
+}
+
+/* NavBar */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav,
+.nav-link,
+.navbar-nav .show > .nav-link {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav-link:before,
+.nav-link:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.nav-link:after {
+  left: 0;
+  bottom: -10px;
+}
+
+.nav-link:before {
+  right: 0;
+  top: -10px;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:hover:after,
+.nav-link:hover:before {
+  width: 100%;
+}
+
+.navbar-nav {
+  --bs-navbar-hover-color: none;
+}
+
+/* NavBar Img */
+
+a.navbar-brand {
+  margin: 0;
+}
+
+.logo {
+  width: 3em;
+}
+
+#navbar-items {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* Footer */
+
+ul {
+  list-style: none;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0e76a8;
+  color: #ffffff;
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #25d366;
+  color: #ffffff;
+}
+
+footer ul a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  height: auto;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-color: #640d14;
+  padding: 35px 0;
+  background-color: #640d14;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 1%;
+}
+
+footer section {
+  min-width: 20%;
+}
+
+footer section h3 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+footer section h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #ccc;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+footer section ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer section ul li a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+footer section ul li a:hover {
+  padding-left: 8px;
+  color: #fff;
+}
+
+ul,
+ol {
+  padding-left: 0;
+}
+
+.container {
+  margin: 2% 0 0 12%;
+}
+
+.card-group {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: none;
+  border-radius: 50px;
+}
+
+.border {
+  border-radius: 20px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+  border-radius: 0 0 15px 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.card-text {
+  margin-bottom: -10px;
+  font-size: 1rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 4px 5px 10px -4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 4px 5px 10px -4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 5px 10px -4px rgba(0, 0, 0, 0.4);
+  border: none;
+}
+
+/* Título - main */
+
+.main-title {
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  color: var(--vinho-escuro);
+  letter-spacing: 1px;
+  font-size: 4em;
+  margin-top: 0.4em;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Coluna de filtros */
+
+.filter-column {
+  background-color: var(--cinza-2);
+  border-radius: 2em;
+  min-height: 32em;
+  max-height: 32em;
+  position: sticky;
+  top: 50px;
+}
+
+.filter-title {
+  text-align: left;
+  font-size: 1.15rem;
+  margin-left: 5%;
+}
+/* Checkboxes */
+
+.form-check label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  line-height: 20px;
+  color: var(b);
+}
+
+.form-check input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form-check label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-check label:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.form-check input[type="checkbox"]:checked + label:after {
+  display: block;
+}
+
+.form-check input[type="checkbox"]:checked + label::before {
+  content: "\2713"; /* ícone de marcação */
+  display: inline-block;
+  color: var(--vinho); /* cor do ícone */
+  font-size: 1.2em; /* tamanho do ícone */
+  margin-right: 5px; /* espaçamento entre a checkbox e o ícone */
+}
+
+.form-check input[type="checkbox"]:checked + label::before {
+  /* ... */
+  vertical-align: middle; /* alinha o ícone verticalmente no centro do quadradinho */
+  line-height: 1em; /* define a altura da linha para que o ícone seja centralizado verticalmente */
+}
